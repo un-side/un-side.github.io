@@ -1,0 +1,155 @@
+/*idx.css*/
+
+/* 画面全体の設定 */
+body {
+background-color: #767676;
+color: #fff;
+font-family: sans-serif;
+margin: 0;
+}
+
+/* 全体の入れ物 */
+#wrapper {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+align-items: center;
+text-align: center;
+}
+
+/* メイン部分を「画面1枚分」の高さに固定 */
+.main-section {
+display: flex;
+flex-direction: column;
+/* justify-content: center; を削除 */
+width: 100%;
+height: 100vh; 
+box-sizing: border-box;
+padding-top: 20vh; /* 画面上部から「1割分」だけ空けて開始（お好みで調整） */
+margin-botoom:3em;
+}
+
+.content {
+flex: 1; /* これを入れることで、残りの隙間をすべて埋めて hr を下に押し出す */
+width: 100%;
+}
+
+
+/* フッター（ここが境界線から始まる） */
+footer {
+width: 100%;
+}
+
+/* 境界線の調整 */
+hr {
+margin: 0; /* 余計な隙間を消す */
+border: none;
+border-top: 1px solid #fff; /* 白い線 */
+}
+
+footer p {
+margin: 20px 0; /* コピーライトの上下余白 */
+}
+
+.title-ruby{
+
+}
+
+.site-title {
+display: flex;
+align-items: center;/* 垂直方向の真ん中に揃える */
+justify-content: center; /* 横方向の真ん中に寄せる */
+}
+
+.title-icon {
+height: 1.13em;/* 文字の大きさに合わせて自動調整 */
+width: auto;
+/* 画像を白くしたい場合は以下を有効にする */
+filter: brightness(0) invert(1);
+}
+
+a.u-i{
+color:#fff;
+text-decoration:none;
+}
+
+/* 特定のボタンや画像に適用する場合 */
+.u-i, .title-icon, img {
+-webkit-touch-callout: none; /* iOSの長押しメニューを禁止 */
+-webkit-user-select: none;/* テキスト選択も禁止しておくとより確実 */
+user-select: none;
+}
+
+.copyright:active::after {
+    /*content: "について";*/
+}
+
+
+/* 「.dl_btn」がついているボタン全部に適用される */
+.dl_btn {
+background-color: #ffcc00; /* 目立つ黄色 */
+font-weight: bold;
+border-radius: 8px;
+border: 2px solid #333;
+text-decoration: none;
+display: inline-block;
+padding: 10px 20px;
+}
+
+.dl_btn:hover {
+background-color: #ffe066;
+}/* DLボタン専用のスタイル（class="dl_btn" をつけた場合） */
+.dl_btn {
+display: inline-block;
+padding: 10px 24px;
+background-color: #f0f0f0;/* 明るい灰色 */
+color: #444; /* 濃い灰色（文字） */
+text-decoration: none;
+border: 1px solid #ccc;/* 控えめな枠線 */
+border-radius: 4px;
+font-size: 0.9em;
+transition: all 0.3s ease;
+cursor: pointer;
+}
+
+/* マウスを乗せた時（ホバー） */
+.dl_btn:hover {
+background-color: #e0e0e0;/* 少しだけ濃い灰色に */
+border-color: #bbb;
+color: #222;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* ほんの少し浮く感じ */
+}
+
+/* クリックした瞬間 */
+.dl_btn:active {
+background-color: #d0d0d0;
+transform: translateY(1px);/* 軽く沈む演出 */
+}
+
+/*いいねボタンなど*/
+.count_btn {
+display: inline-block;
+width: fit-content;
+white-space: nowrap;
+cursor: pointer;
+background-color: #919191;
+color: #fff;
+border: 2px solid #6E6E6E;
+border-radius: 16px;
+padding: 3px 18px;
+transition: 0.2s;
+user-select: none;
+
+box-shadow: 0 4px 0 #464646;
+margin:15px;
+
+font-size:1.5em; 
+}
+.count_btn:hover {
+background-color: #666;
+}
+.count_btn:active {
+/*transform: scale(0.95);*/
+box-shadow: 0 1px 0 #464646; /* 影を薄くする */
+transform: translateY(3px);   /* 影の分だけ下にずらす */
+}
